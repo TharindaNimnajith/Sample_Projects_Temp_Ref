@@ -1,0 +1,59 @@
+.backImage {
+    background-image: url(../images/denim.jpg);
+}
+.addProduct {
+    margin-left: 30px;
+    margin-right: 800px;
+}
+
+h3 {
+    color: #4A235A
+}
+h4 {
+    color: #4A235A
+}
+label {
+    color: #7d3f9c;
+}
+input {
+    background-color: #EBDEF0;
+    border: 0;
+    width: 300px;
+    height: 35px;
+    padding: 0 10px;
+    border-radius: 5px;
+    outline: none;
+}
+
+select {
+    background-color: #EBDEF0;
+    border: 0;
+    width: 300px;
+    height: 35px;
+    padding: 0 10px;
+    border-radius: 5px;
+    outline: none;
+}
+.btnAdd {
+    background-color: #8E44AD;
+    color: white;
+    height: 40px;
+    width: 110px;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btnAdd:focus {
+    outline: none;
+}
+
+.btnImageAdd {
+    background-color: #8E44AD;
+    color: white;
+    height: 40px;
+    width: 155px;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}

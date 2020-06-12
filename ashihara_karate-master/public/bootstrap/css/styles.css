@@ -1,0 +1,11 @@
+.bg-base{
+    background-color: #f92d12;
+}
+
+.txt-base {
+    color: #f92d12;
+}
+
+html {
+    scroll-behavior: smooth;
+  }

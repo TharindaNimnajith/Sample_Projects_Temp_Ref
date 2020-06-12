@@ -1,0 +1,85 @@
+.parallax {
+    /* The image used */
+    /* Full height */
+    height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.logo-table {
+    width: 50%;
+    position: relative;
+    left: 50%
+}
+
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+@media only screen and (max-device-width: 600px) {
+    .logo-table {
+        width: 80%;
+        position: relative;
+        left: 10%;
+        top : 150px;
+    }
+}
+
+.button {
+    background-color: Transparent;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button2 {
+    background-color: Transparent;
+    color: white;
+    font-weight: bold;
+    border: 2px solid white;
+}
+
+.button2:hover {
+    background-color: white;
+    color: red;
+}
+
+.parallax-container {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.parallax-container-inner {
+    position: relative;
+    top: 2000;
+    bottom: 200;
+    color: white;
+}
+
+.logo {
+    border-radius: 50%;
+    -webkit-transition: -webkit-transform 3s ease-in-out;
+    transition: transform 3s ease-in-out;
+}
+
+.logo:hover {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}

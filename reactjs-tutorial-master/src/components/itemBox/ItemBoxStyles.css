@@ -1,0 +1,14 @@
+.box {
+    width: 18%;
+    height: 500px;
+    background-color: aqua;
+    margin: 1%;
+}
+
+.prod-img{
+    width: 50%;
+}
+
+.prod-img:hover {
+    width: 70%;
+}

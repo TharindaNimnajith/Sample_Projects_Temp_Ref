@@ -1,0 +1,13 @@
+.nav-link1{
+    text-decoration: none;
+    color: white;
+    
+    padding-right: .5rem;
+    padding-left: .5rem
+}
+
+.nav-link1:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}

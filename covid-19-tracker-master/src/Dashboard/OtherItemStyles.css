@@ -1,0 +1,27 @@
+#main-img {
+    width: 100%
+}
+
+@media screen and (max-width: 767px) {
+    #main-img {
+        background-image: url('https://cdn.newsfirst.lk/english-uploads/2020/03/df84b558-contacts-mobile.jpg');
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #main-img {
+        background-image: url('https://cdn.newsfirst.lk/english-uploads/2020/03/df84b558-contacts-mobile.jpg');
+    }
+}
+
+@media (min-width: 992px) {
+    #main-img {
+        background-image: url('https://cdn.newsfirst.lk/english-uploads/2020/03/2ebea10f-contacts.jpg');
+    }
+}
+
+@media (min-width: 1200px) {
+    #main-img {
+        background-image: url('https://cdn.newsfirst.lk/english-uploads/2020/03/2ebea10f-contacts.jpg');
+    }
+}

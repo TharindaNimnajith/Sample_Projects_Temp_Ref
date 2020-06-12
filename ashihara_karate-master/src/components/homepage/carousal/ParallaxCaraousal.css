@@ -1,0 +1,109 @@
+.ha-bg-parallax {
+    background: url(https://scontent.fdel8-1.fna.fbcdn.net/v/t1.0-9/23621599_1243573765772587_1463122925949401168_n.jpg?oh=b6641b3c2f50526b0fa2d2046943c7aa&oe=5B12D8F4) 50% -0 no-repeat fixed;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    min-height: 650px;
+    margin: 0 auto;
+    width: 100%;
+    display: table;
+    vertical-align: middle;
+    position: relative;
+}
+
+.ha-parallax-body {
+    vertical-align: middle;
+    background: rgba(0, 0, 0, 0.45);
+    text-align: center;
+    color: #FFFFFF;
+    min-height: 650px;
+}
+
+.vertical .carousel-inner {
+    height: 100%;
+}
+
+.carousel.vertical .item {
+    -webkit-transition: 0.6s ease-in-out top;
+    -moz-transition: 0.6s ease-in-out top;
+    -ms-transition: 0.6s ease-in-out top;
+    -o-transition: 0.6s ease-in-out top;
+    transition: 0.6s ease-in-out top;
+}
+
+.carousel.vertical .active {
+    top: 0;
+}
+
+.carousel.vertical .next {
+    top: 100%;
+}
+
+.carousel.vertical .prev {
+    top: -100%;
+}
+
+.carousel.vertical .next.left, .carousel.vertical .prev.right {
+    top: 0;
+}
+
+.carousel.vertical .active.left {
+    top: -100%;
+}
+
+.carousel.vertical .active.right {
+    top: 100%;
+}
+
+.carousel.vertical .item {
+    left: 0;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: unset;
+    right: 2%;
+    z-index: 15;
+    width: 1%;
+    padding-left: 0;
+    margin-left: -30%;
+    text-align: right;
+    list-style: none;
+    top: 30%;
+}
+
+#carousel-example-generic {
+    top: 200px;
+}
+
+.carousel-indicators li {
+    float: none
+}
+
+#carousel-example-generic h3 {
+    font: normal 50px poppinsregular;
+    color: #FFFFFF;
+    margin: 0;
+    text-shadow: 0 0 10px #666;
+}
+
+#carousel-example-generic h1 {
+    font: normal 80px/61px poppinssemibold;
+    color: #FFFFFF;
+    margin: 0;
+    text-shadow: 0 0 10px #666;
+}
+
+@media only screen and (max-width: 600px) {
+    #firstPage {
+        min-height: 50vh;
+        width: 100%;
+    }
+    .ha-parallax-body {
+        min-height: 50vh;
+        width: 100%;
+    }
+   
+}

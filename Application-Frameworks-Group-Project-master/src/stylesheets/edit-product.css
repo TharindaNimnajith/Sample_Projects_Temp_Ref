@@ -1,0 +1,72 @@
+.backImg {
+    background-image: url(../images/shirts.jpg);
+    height: 1000px;
+}
+.editProduct {
+    margin-left: 30px;
+    margin-right: 800px;
+}
+h3 {
+    color: #4A235A
+}
+p {
+    color: #cb2715;
+    margin-bottom: 10px;
+}
+label {
+    color: #7d3f9c;
+}
+input {
+    background-color: #EBDEF0;
+    border: 0;
+    width: 300px;
+    height: 35px;
+    padding: 0 10px;
+    border-radius: 5px;
+    outline: none;
+}
+select {
+    background-color: #EBDEF0;
+    border: 0;
+    width: 300px;
+    height: 35px;
+    padding: 0 10px;
+    border-radius: 5px;
+    outline: none;
+}
+.btnUpdate {
+    background-color: #8E44AD;
+    color: white;
+    height: 40px;
+    width: 130px;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+img {
+    width: 300px;
+    height: 330px;
+    overflow: hidden;
+    margin: 10px auto;
+}
+.btnUpdateImg {
+    background-color: #8E44AD;
+    color: white;
+    height: 40px;
+    width: 180px;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btnDeleteImg {
+    background-color: #d12717;
+    color: white;
+    height: 40px;
+    width: 180px;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}

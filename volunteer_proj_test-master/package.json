@@ -1,0 +1,16 @@
+{
+  "name": "medium_azure_example",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "cd client/mern_azure_example && yarn && yarn run build && cd ../.. && node server",
+    "dev": "node server"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.6"
+  }
+}

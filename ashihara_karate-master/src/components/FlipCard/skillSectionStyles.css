@@ -1,0 +1,31 @@
+.card-skill {
+    margin: 10px;
+    height: 4rem;
+}
+
+.cards-skill {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Screen larger than 600px? 2 column */
+
+@media (min-width: 600px) {
+    .cards-skill {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Screen larger than 900px? 3 columns */
+
+@media (min-width: 900px) {
+    .card-skill {
+        margin: 1rem;
+    }
+    .cards-skill {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}

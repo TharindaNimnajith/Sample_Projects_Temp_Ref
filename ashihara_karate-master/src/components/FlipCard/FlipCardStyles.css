@@ -1,0 +1,15 @@
+.mem-image {
+  height: 300px;
+}
+
+
+
+.pic-wrapper {
+  transition: all .1s ease-in-out;
+}
+
+.pic-wrapper:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  
+}

@@ -1,0 +1,13 @@
+.img-wrap {
+    width: 100%; 
+    margin: 0;
+  }
+  
+  .img-wrap > img {  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    transform: translate(-50%, -50%);
+  }

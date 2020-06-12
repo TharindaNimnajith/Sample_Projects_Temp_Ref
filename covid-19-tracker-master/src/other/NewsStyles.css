@@ -1,0 +1,13 @@
+
+
+
+.news-container{
+    width: 50%;
+}
+
+@media screen and (max-width: 1000px) {
+    .news-container {
+       width: 90%;
+      
+    }
+ }

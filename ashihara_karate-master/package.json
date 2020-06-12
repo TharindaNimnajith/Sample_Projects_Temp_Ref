@@ -1,0 +1,48 @@
+{
+  "name": "karate-final",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "aos": "^2.3.4",
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "firebase": "^7.14.3",
+    "netlify-cli": "^2.50.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-facebook": "^8.1.4",
+    "react-fb-image-grid": "^0.1.5",
+    "react-image-lightbox": "^5.1.1",
+    "react-player": "^2.0.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
+    "react-ui-cards": "^2.0.0",
+    "sweetalert": "^2.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy:prod": "react-scripts build && netlify deploy --dir=build --prod"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "https://us-central1-website-63ee1.cloudfunctions.net/api"
+}
