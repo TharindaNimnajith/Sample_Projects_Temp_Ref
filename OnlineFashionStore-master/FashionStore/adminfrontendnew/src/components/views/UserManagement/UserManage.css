@@ -1,0 +1,60 @@
+#parallaxintro .view {
+    /* background-image: url('https://mdbootstrap.com/img/Photos/Others/architecture.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    left: -20px !important;
+}
+
+.AddItemHeight{
+    width: 100%;
+}
+
+.h1col{
+    color: #2bbbad;
+}
+
+.rounded{
+    border-radius: 50%;
+}
+
+.searchC{
+    position: relative;
+    left: 60%;
+}
+
+.charts{
+    height: 450px !important;
+}
+
+.feedbackdiv2{
+    background-color: #E5E8E8  ;
+}
+
+.feedbackcard{
+    height: 450px !important;
+}
+
+.feedbackdiv{
+    background-color: #9fa8da;
+}
+
+.feedbacktext{
+    /*font-weight: bold !important;*/
+    font-size: 18px !important;
+}
+
+/*.leftmargin{*/
+/*    margin-left: 0px !important;*/
+/*}*/
+
+
+.pageNumCss{
+    width:45px !important;
+    color: #17A2B8 !important;
+    text-align: center !important;
+    font-weight: bold !important;
+   border: white;
+    background-color: white;
+}

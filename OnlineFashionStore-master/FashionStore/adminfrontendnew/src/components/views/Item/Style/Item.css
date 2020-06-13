@@ -1,0 +1,84 @@
+
+.AddItemHeight{
+    height: 100vh;
+    width: 100%;
+}
+.SearchItemHeight{
+    background-color: green;
+    height: 100vh;
+    width: 100%;
+}
+
+.BrandCategoryMain{
+
+    height: 100vh;
+    width: 100%;
+}
+
+.itemColorMain{
+    height: 65vh;
+    width: 100%;
+}
+
+.deleteIconColor{
+    float: left;
+    color: red;
+
+}
+
+.deleteBtnSize{
+    height: 4px;
+    width :3px;
+}
+
+img {
+    position: relative;
+    display: block;
+    max-width:230px;
+    max-height:195px;
+    width: auto;
+    height: auto;
+    border: black;
+}
+
+.tableImage{
+    max-height:55px;
+}
+
+.btnClass{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 6px 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btnClass:hover {
+    background-color: black;
+}
+
+.optionStyle{
+    margin-top: 10px;
+}
+
+.labelAlign{
+    font-size: 20px;
+}
+
+.imageSize{
+    height: 10px;
+
+}
+
+
+.imageC{
+    text-align: left !important;
+}

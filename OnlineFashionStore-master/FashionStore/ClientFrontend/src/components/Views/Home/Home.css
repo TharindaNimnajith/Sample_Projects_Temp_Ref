@@ -1,0 +1,36 @@
+.carouselHeight{
+    height: 300px;
+}
+
+.testColor{
+    background-color: #5de7ff;
+    height: 600px;
+}
+
+.testRowColor{
+    background-color:yellow;
+}
+
+.textAlign{
+    text-align: left;
+    text-decoration: black;
+    font-family: 'Bungee Inline', cursive;
+
+}
+
+.cardMarginTop{
+    margin-top: 20px;
+}
+
+.btnSize{
+    width :190px;
+    height: 40px;
+
+}
+.btnSize1{
+    text-align: center;
+    width :150px;
+    height: 40px;
+
+}
+

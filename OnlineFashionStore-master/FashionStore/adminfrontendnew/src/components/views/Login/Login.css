@@ -1,0 +1,24 @@
+
+.buttonSign{
+    border-radius: 10px !important;
+}
+
+.loginContainer{
+    border-radius: 30px !important;
+
+}
+
+
+#apppage .view {
+    background-image: url('./BackWall.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    left: -20px !important;
+
+}
+
+#apppage h6 {
+    line-height: 1.7;
+}

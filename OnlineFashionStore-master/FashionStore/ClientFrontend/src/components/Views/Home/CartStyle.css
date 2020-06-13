@@ -1,0 +1,48 @@
+
+.btn11{
+    background-color: transparent;
+    text-transform: capitalize;
+    font-size: 0.9rem !important;
+    color: #0f0f0f;
+    border-radius: 1px !important;
+    border: 0.1rem #00b0ff !important;
+    width: 20px;
+    height: 40px;
+}
+.block-example {
+    width: 94rem;
+    height: 0.1rem;
+    margin: 0.5rem;
+    background-color: #eee;
+    display: inline-block;
+}
+.right1 {
+    width: 50px;
+}
+.rate-popover {
+    color: #c4c4c4;
+}
+
+.oneStar {
+    color: #3d381c;
+}
+
+.twoStars {
+    color: #6d6126;
+}
+
+.threeStars {
+
+    color: #c2aa36;
+}
+
+.fourStars {
+    color: #e2c327;
+}
+
+.fiveStars {
+    color: #f3cb06;
+}
+.fa-star{
+    color: #f3cb06;
+}
