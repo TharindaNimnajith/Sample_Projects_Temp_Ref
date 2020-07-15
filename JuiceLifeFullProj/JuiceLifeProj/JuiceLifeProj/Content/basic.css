@@ -1,0 +1,10 @@
+﻿
+.myactionlink {
+    color: #ffffff;
+    background-color: #D9230F;
+    border-color: #D9230F;
+}
+
+    .myactionlink:hover {
+        color: #ffffff;
+    }

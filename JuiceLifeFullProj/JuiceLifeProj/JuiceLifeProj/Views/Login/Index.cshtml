@@ -1,0 +1,117 @@
+﻿@{
+        Layout = null;
+    }
+
+    <!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <link href="~/juicelife.ico" rel="icon" type="image/x-icon" />
+        <title>Index</title>
+
+        <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="~/fonts/font-awesome-4.7.0/">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="~/fonts/Linearicons-Free-v1.0.0/">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="~/vendor/animate/animate.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="~/vendor/css-hamburgers/hamburgers.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="~/vendor/animsition/css/animsition.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="~/vendor/select2/select2.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="~/vendor/daterangepicker/daterangepicker.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="~/Content/util.css">
+        <link rel="stylesheet" type="text/css" href="~/Content/main.css">
+    </head>
+    <body>
+        @*<br /><br />
+        <h1 align="center">Juice Bar Management System - Juice Life Matara</h1>
+
+        <br /><br /><br /><br /><br /><br /><br /><br />
+        <h3 align="center">Login Page</h3>
+        @ViewBag.error
+        <form method="post" action="@Url.Action("Login","Login")">
+            <table border="0" cellpadding="2" cellspacing="2" align="center">
+                <tr>
+                    <td>Username</td>
+                    <td><input type="text" name="username" /></td>
+                </tr>
+
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password" /></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><button type="submit" class="btn btn-primary">Login</button></td>
+                </tr>
+            </table>
+        </form>*@
+
+        <div class="limiter">
+            <div class="container-login100" style="background-image: url('../../BackgroundImage/JuiceLifeLogin.jpg');">
+                <div class="wrap-login100 p-t-30 p-b-50">
+                    <span class="login100-form-title p-b-41">
+                        Juice Life Matara - Account Login 
+                    </span>
+                    <br/>
+                    <br/>
+                    <form class="login100-form validate-form p-b-33 p-t-5" method="post" action="@Url.Action("Login","Login")">
+                        @ViewBag.error
+
+                        <div class="wrap-input100 validate-input" data-validate="Enter username">
+                            <input class="input100" type="text" name="username" placeholder="User name">
+                            <span class="focus-input100" data-placeholder="&#xe82a;"></span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input" data-validate="Enter password">
+                            <input class="input100" type="password" name="password" placeholder="Password">
+                            <span class="focus-input100" data-placeholder="&#xe80f;"></span>
+                        </div>
+
+                        <div class="container-login100-form-btn m-t-32">
+                            <button class="login100-form-btn" type="submit">
+                                Login
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="dropDownSelect1"></div>
+
+        <!--===============================================================================================-->
+        <script src="~/vendor/jquery/jquery-3.2.1.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="~/vendor/animsition/js/animsition.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="~/vendor/bootstrap/js/popper.js"></script>
+        <script src="~/vendor/bootstrap/js/bootstrap.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="vendor/select2/select2.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="~/vendor/daterangepicker/moment.min.js"></script>
+        <script src="~/vendor/daterangepicker/daterangepicker.js"></script>
+        <!--===============================================================================================-->
+        <script src="~/vendor/countdowntime/countdowntime.js"></script>
+        <!--===============================================================================================-->
+        <script src="~/Scripts/main.js"></script>
+    </body>
+    </html>
+
+
+
+
+    
+
+
+    
+

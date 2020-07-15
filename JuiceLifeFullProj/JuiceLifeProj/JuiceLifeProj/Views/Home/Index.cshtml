@@ -1,0 +1,44 @@
+﻿@model IEnumerable<JuiceLifeProj.Product>
+@{
+    ViewBag.Title = "Home";
+}
+@if (TempData["msg"] != null)
+{
+    <br />
+    <div class="alert alert-success alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Success</strong> @TempData["msg"]
+    </div>
+}
+<div class="row">
+    <div class="col-lg-10 col-md-10 col-sm-10">
+        @if (TempData["tot"] == null)
+        {
+            <br />
+            <h3>Total Bill: 0 LKR</h3>
+        }
+
+        else
+        {
+            <br />
+            <h3>Total Bill: @TempData["tot"] LKR</h3>
+            
+        }
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-2">
+        <br />
+        <h3 style="color:#808080; font-family:'Arial Rounded MT';text-align:center"><span class="btn btn-info">@Html.ActionLink("Check out", "checkout", "Home")</span></h3>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <img style="min-height:100px;width:60px" src="@Url.Content(item.pro_image)" />
+                <h4 style="text-align:center">@item.pro_name</h4>
+                <h5 style="text-align:center"><span class="btn btn-outline-danger">@Html.ActionLink("Add To Cart", "Addtocart", new { id = item.pro_id })</span></h5>
+            </div>
+        }
+    </div>
+</div>

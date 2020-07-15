@@ -1,0 +1,51 @@
+﻿@model JuiceLifeProj.OutGoing
+@{
+    ViewBag.Title = "Details";
+}
+<h2>Details</h2>
+<div>
+    <h4>Outgoing</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpSalary)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmpSalary)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierCost)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SupplierCost)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PurchasedFood)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PurchasedFood)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tax)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tax)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UtilityBills)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UtilityBills)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TransportCost)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TransportCost)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OutGoingId }, new { @class = "btn btn-primary" }) |
+    @Html.ActionLink("Back to List", "Index", new object { }, new { @class = "btn btn-primary" })
+</p>

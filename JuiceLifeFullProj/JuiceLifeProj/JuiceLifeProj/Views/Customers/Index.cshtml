@@ -1,0 +1,91 @@
+﻿@model IEnumerable<JuiceLifeProj.Customer>
+@{
+    ViewBag.Title = "Customers";
+}
+<br />
+<h2>Customers</h2>
+<p>
+    @Html.ActionLink("Create New", "Create", new object { }, new { @class = "btn btn-primary" })
+</p>
+@Html.ActionLink("Export to Excel", "Reports", new { ReportType = "Excel" }) |
+@Html.ActionLink("Export to PDF", "Reports", new { ReportType = "PDF" }) |
+@Html.ActionLink("Export to Word", "Reports", new { ReportType = "Word" }) |
+@Html.ActionLink("Export to Image", "Reports", new { ReportType = "Image" })
+<br /><br />
+<p>
+    @using (Html.BeginForm("Index", "Customers", FormMethod.Get))
+    {
+        <b>Search By: Customer Firstname </b>
+        @*@Html.RadioButton("searchBy", "Fname", true)<text>First Name</text>
+        @Html.RadioButton("searchBy", "Lname")<text>Last Name</text>*@
+        @Html.TextBox("search") <input type="submit" value="Search" class="btn btn-primary" />
+
+    }
+</p>
+<table class="table table-hover">
+    <tr class="table-primary">
+        <th>
+            @Html.DisplayNameFor(model => model.Fname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactNo)
+        </th>
+        <th></th>
+    </tr>
+    @if (Model.Count() == 0)
+    {
+        <tr>
+            <td colspan="3">No rows match search criteria</td>
+        </tr>
+    }
+    else
+    {
+        foreach (var item in Model)
+        {
+            <tr class="table-active">
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Lname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Age)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ContactNo)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.CustomerId }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.CustomerId }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.CustomerId }, new { @class = "btn btn-primary" })
+                </td>
+            </tr>
+        }
+    }
+
+</table>

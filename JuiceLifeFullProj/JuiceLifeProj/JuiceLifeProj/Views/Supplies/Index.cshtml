@@ -1,0 +1,100 @@
+﻿@model IEnumerable<JuiceLifeProj.Supply>
+@{
+    ViewBag.Title = "Supplies";
+}
+<br />
+<h2>Supplies</h2>
+<hr />
+
+@Html.ActionLink("Create New", "Create", new object { }, new { @class = "btn btn-primary" })
+<br /><br />
+
+@Html.ActionLink("Export to Excel", "Reports", new { ReportType = "Excel" }) |
+@Html.ActionLink("Export to PDF", "Reports", new { ReportType = "PDF" }) |
+@Html.ActionLink("Export to Word", "Reports", new { ReportType = "Word" }) |
+@Html.ActionLink("Export to Image", "Reports", new { ReportType = "Image" }) 
+<br />
+
+<p>
+    @using (Html.BeginForm("Index", "Supplies", FormMethod.Get))
+    {
+        <b>Search By: </b>
+        @Html.RadioButton("searchBy", "ItemName", true)<text>Item</text>
+        @Html.RadioButton("searchBy", "SupplierName")<text>Supplier</text>
+        @Html.TextBox("search") <input type="submit" value="Search" class="btn btn-primary" />
+
+    }
+</p>
+<table class="table table-hover">
+    <tr class="table-primary">
+        <th>
+            @Html.DisplayNameFor(model => model.SupplyId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SupplierName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoOfUnits)
+        </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.TotalPrice)
+            </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpiredDate)
+        </th>
+        <th></th>
+    </tr>
+    @if (Model.Count() == 0)
+    {
+        <tr>
+            <td colspan="6">No rows match search criteria</td>
+        </tr>
+    }
+    else
+    {
+        foreach (var item in Model)
+        {
+            <tr class="table-active">
+                <td>
+                    @Html.DisplayFor(modelItem => item.SupplyId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SupplierName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ItemName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnitPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NoOfUnits)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.TotalPrice)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ExpiredDate)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.SupplyId }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.SupplyId }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.SupplyId }, new { @class = "btn btn-primary" })
+                </td>
+            </tr>
+        }
+    }
+
+</table>

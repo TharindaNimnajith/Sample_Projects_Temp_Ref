@@ -1,0 +1,107 @@
+﻿
+@{
+    ViewBag.Title = "checkout";
+}
+<h2>checkout</h2>
+
+@Html.ActionLink("Export to Excel", "Reports", new { ReportType = "Excel" }) |
+@Html.ActionLink("Export to PDF", "Reports", new { ReportType = "PDF" }) |
+@Html.ActionLink("Export to Word", "Reports", new { ReportType = "Word" }) |
+@Html.ActionLink("Export to Image", "Reports", new { ReportType = "Image" })
+
+@if (TempData["cart"] != null)
+{
+
+
+    <table class="table table-responsive">
+        <thead>
+            <tr>
+                <th>ID of product</th>
+                <th>Name of product</th>
+                <th>Price of product</th>
+                <th>Quantity 0f Product</th>
+                <th>Bill</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in TempData["cart"] as List<JuiceLifeProj.Models.Cart>)
+            {
+                <tr>
+                    <td>@item.productid</td>
+                    <td>@item.productname</td>
+                    <td>@item.price</td>
+                    <td>@item.qty</td>
+                    <td>@item.bill</td>
+                    <td>
+                        <a class='btn btn-danger btn-sm' href="@Url.Action("remove",new { id=item.productid})">Delete</a>
+                        <a class='btn btn-danger btn-sm' href="@Url.Action("Addtocart",new { id=item.productid})">Edit</a>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4"></td>
+                <td>Total: @TempData["tot"]</td>
+            </tr>
+        </tfoot>
+    </table>
+
+     <form name="formcalc" onclick="return(validate());">
+        Cash:
+        <br />
+        <input type="number" name="txtnum1" size="35" />
+        <br />
+        <br />
+        Total Bill Amount:
+        <br />
+        <input type="number" name="txtnum2" size="35" />
+        <br />
+        <br />
+        Balance  :
+        <br />
+        <input type="number" name="txtres" size="35" readonly/>
+        <br />
+        <br />
+        <input type="button" value="Calculate" onclick="sumValues()" />
+         <br/>
+    </form>
+    <script type="text/javascript">
+        function validate() {
+
+            if (document.formcalc.txtnum1.value == "") {
+                alert("Please Enter cash amount!");
+                document.formcalc.txtnum1.focus();
+                return false;
+            }
+            if (document.formcalc.txtnum2.value == "") {
+                alert("Please Enter total amount!");
+                document.formcalc.txtnum2.focus();
+                return false;
+            }
+            return (true);
+        }
+        function sumValues() {
+            var num1, num2, res;
+            num1 = Number(document.formcalc.txtnum1.value);
+            num2 = Number(document.formcalc.txtnum2.value);
+            res = num1 - num2;
+            document.formcalc.txtres.value = res;
+        }
+    </script>
+
+}
+else
+{
+    <h2 style="color:red">Cart is empty</h2>
+    @Html.ActionLink("Go Back", "Index", "Home")
+}
+@if (TempData["cart"] != null)
+{
+    using (Html.BeginForm())
+    {
+        <br/>
+        <input type="submit" value="Shop" class="btn btn-primary" />
+    }
+}

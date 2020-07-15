@@ -1,0 +1,35 @@
+﻿@model IEnumerable<JuiceLifeProj.Income>
+@{
+    ViewBag.Title = "Income";
+}
+<br />
+<h2>Incomes</h2>
+<p>
+    @Html.ActionLink("Create New", "Create", new object { }, new { @class = "btn btn-primary" })
+</p>
+@Html.ActionLink("Export to Excel", "Reports", new { ReportType = "Excel" }) |
+@Html.ActionLink("Export to PDF", "Reports", new { ReportType = "PDF" }) |
+@Html.ActionLink("Export to Word", "Reports", new { ReportType = "Word" }) |
+@Html.ActionLink("Export to Image", "Reports", new { ReportType = "Image" })
+<br /><br />
+<table class="table table-hover">
+    <tr class="table-primary">
+        <th>
+            @Html.DisplayNameFor(model => model.SoldFoodItems)
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr class="table-active">
+            <td>
+                @Html.DisplayFor(modelItem => item.SoldFoodItems)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.IncomeId }, new { @class = "btn btn-primary" }) |
+                @Html.ActionLink("Details", "Details", new { id = item.IncomeId }, new { @class = "btn btn-primary" }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.IncomeId }, new { @class = "btn btn-primary" })
+            </td>
+        </tr>
+    }
+</table>

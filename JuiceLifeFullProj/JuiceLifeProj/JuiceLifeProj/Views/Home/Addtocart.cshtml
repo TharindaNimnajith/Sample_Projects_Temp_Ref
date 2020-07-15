@@ -1,0 +1,27 @@
+﻿@model JuiceLifeProj.Product
+
+@{
+    ViewBag.Title = "Addtocart";
+}
+<br />
+<br />
+<br />
+@using (Html.BeginForm())
+{
+
+
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <img style="min-height:150px; width:90px" src="@Url.Content(Model.pro_image)" />
+        </div>
+
+        <div class="col-lg-8 col-md-8 col-sm-8">
+            <h1>Product Name: @Model.pro_name</h1>
+            <h2>Price: @Model.pro_price LKR</h2>
+            <h6>Description: @Model.pro_desc</h6>
+            <input type="number" name="qty" value="1" id="qty" min="1" max="10" />
+            <input type="submit" value="Submit" class="btn btn-primary" />
+        </div>
+    </div>
+
+}

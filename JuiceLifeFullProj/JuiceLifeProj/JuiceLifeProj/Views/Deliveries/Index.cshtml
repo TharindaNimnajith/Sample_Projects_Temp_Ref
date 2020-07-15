@@ -1,0 +1,81 @@
+﻿@model IEnumerable<JuiceLifeProj.Delivery>
+@{
+    ViewBag.Title = "Delivery";
+}
+<br />
+<h2>Deliveries</h2>
+<p>
+    @Html.ActionLink("Create New", "Create", new object { }, new { @class = "btn btn-primary" })
+</p>
+
+@Html.ActionLink("Export to Excel", "Reports", new { ReportType = "Excel" }) |
+@Html.ActionLink("Export to PDF", "Reports", new { ReportType = "PDF" }) |
+@Html.ActionLink("Export to Word", "Reports", new { ReportType = "Word" }) |
+@Html.ActionLink("Export to Image", "Reports", new { ReportType = "Image" })
+<br /><br />
+
+<p>
+    @using (Html.BeginForm("Index", "Deliveries", FormMethod.Get))
+    {
+        <b>Search By: </b>
+        @Html.RadioButton("searchBy", "ProductName", true)<text>Product Name</text>
+        @Html.RadioButton("searchBy", "CustomerName")<text>Customer Name</text>
+        @Html.TextBox("search") <input type="submit" value="Search" class="btn btn-primary" />
+
+    }
+</p>
+<table class="table table-hover">
+    <tr class="table-primary">
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeliveryPerson)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeliveryAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </th>
+        <th></th>
+    </tr>
+    @if (Model.Count() == 0)
+    {
+        <tr>
+            <td colspan="5">No rows match search criteria</td>
+        </tr>
+    }
+    else
+    {
+        foreach (var item in Model)
+        {
+            <tr class="table-active">
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DeliveryPerson)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Amount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DeliveryAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.DeliveryId }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.DeliveryId }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.DeliveryId }, new { @class = "btn btn-primary" })
+                </td>
+            </tr>
+        }
+    }
+
+</table>

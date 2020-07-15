@@ -1,0 +1,20 @@
+﻿
+@{
+    Layout = "~/Views/Shared/Customer_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Customer login Successful</title>
+</head>
+<body>
+    <h3>Success page - Customer</h3>
+    Welcome @Session["username"]
+    <br />
+    <a href="@Url.Action("Logout", "Login")">Logout</a>
+
+</body>
+</html>
